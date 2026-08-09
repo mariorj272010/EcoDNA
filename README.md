@@ -27,8 +27,10 @@ EcoDNA is a environmental waste intelligence prototype:
 
 1. Install Node.js 20 or newer.
 2. Run `npm install` in this folder.
-3. Run the complete `supabase/ecodna_reports.sql` in the Supabase SQL Editor. It is safe to rerun on an existing EcoDNA project and adds the reporter/rewards schema. Existing projects can instead run the smaller `supabase/reporter_rewards_migration.sql` upgrade.
-4. Start EcoDNA:
+3. Copy `.env.example` to `.env.local`.
+4. Add the Gemini API key, Supabase project URL, and server-only service-role key.
+5. Run the complete `supabase/ecodna_reports.sql` in the Supabase SQL Editor. It is safe to rerun on an existing EcoDNA project and adds the reporter/rewards schema. Existing projects can instead run the smaller `supabase/reporter_rewards_migration.sql` upgrade.
+6. Start EcoDNA:
 
 ```bash
 npm run dev
