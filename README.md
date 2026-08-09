@@ -1,6 +1,6 @@
 # EcoDNA MVP
 
-EcoDNA is a hackathon-ready environmental waste intelligence prototype:
+EcoDNA is a environmental waste intelligence prototype:
 
 **Reporter account → photo → Gemini Vision → standardized classification → contributor verification → GPS → independent reviewer approval → rewards + Waste DNA → Action Center**
 
