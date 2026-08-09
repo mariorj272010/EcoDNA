@@ -1,0 +1,18 @@
+# Secrets and local configuration
+.env.local
+.env*.local
+
+# Dependencies and generated Next.js output
+node_modules/
+.next/
+out/
+tsconfig.tsbuildinfo
+
+# Local fallback storage and local development logs
+data/
+.codex-dev.stdout.log
+.codex-dev.stderr.log
+
+# Operating system/editor noise
+.DS_Store
+Thumbs.db

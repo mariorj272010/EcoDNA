@@ -1,0 +1,36 @@
+/* Route-scoped copy of the supplied frontend's landing design. Backend additions cannot override it. */
+.originalLanding .landingIntro { position: relative; width: 100vw; height: auto; margin-left: calc(50% - 50vw); min-height: 100svh; overflow: hidden; background: var(--paper); }
+.originalLanding .bottleCanvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.originalLanding .landingHero { min-height: 0; display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; padding: 48px 0 40px; border: 0; border-radius: 0; overflow: visible; background: transparent; color: inherit; box-shadow: none; }
+.originalLanding .landingHeroHeadline { max-width: none; font-family: var(--font-display); font-weight: 800; font-size: clamp(2.5rem,6vw,4.5rem); line-height: .95; letter-spacing: normal; text-transform: uppercase; margin: 10px 0 18px; text-wrap: balance; }
+.originalLanding .landingHeroHeadline em { font-style: normal; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 8px; text-decoration-color: var(--ink); }
+.originalLanding .landingHeroBody { font-size: 1.0625rem; line-height: 1.6; color: var(--pencil-gray); max-width: 34ch; margin: 0 0 22px; }
+.originalLanding .landingTagStack { position: relative; height: 260px; margin: 0; }
+.originalLanding .landingTagStack .fieldTag { position: absolute; width: min(260px,80vw); }
+.originalLanding .fieldTag { position: relative; width: 100%; display: block; gap: 0; padding: 14px 16px; background: var(--card-paper); border: 1px solid var(--hairline); border-radius: var(--radius-lg,8px); box-shadow: 0 8px 20px rgba(33,29,22,.18); transition: transform var(--duration-base,220ms) var(--ease-out); animation: stampDown 420ms var(--ease-out) backwards; }
+.originalLanding .fieldTag:hover { transform: translateY(-4px) rotate(0deg) !important; }
+.originalLanding .fieldTagMeta { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--pencil-gray); }
+.originalLanding .fieldTagTitle { font-family: var(--font-display); font-weight: 700; font-size: 18px; text-transform: uppercase; margin: 4px 0 8px; color: var(--ink); }
+.originalLanding .fieldTagDescription { min-height: 0; font-family: var(--font-body); font-size: var(--text-sm,.8125rem); color: var(--pencil-gray); margin: 0 0 8px; }
+.originalLanding .flagChip { display: inline-flex; align-items: center; gap: 5px; font-family: var(--font-mono); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .02em; padding: 3px 8px; border-radius: var(--radius-pill,999px); }
+.originalLanding .flagChip.flagged { background: var(--flag-orange); color: var(--ink); }
+.originalLanding .flagChip.verified { background: var(--stamp-green); color: var(--card-paper); }
+.originalLanding .landingSection { display: block; margin: 0; padding: 48px 0; border-top: 1px solid var(--hairline); background: transparent; }
+.originalLanding .landingSectionHeadline { max-width: none; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.75rem,4vw,2.5rem); line-height: normal; text-transform: uppercase; margin: 0 0 24px; text-wrap: balance; color: inherit; }
+.originalLanding .landingSteps { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.originalLanding .landingLogGrid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 18px; }
+.originalLanding .landingCaseFile p { font-size: 1.0625rem; line-height: 1.65; color: var(--pencil-gray); max-width: 68ch; margin: 0 0 16px; }
+.originalLanding .landingLoop { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; font-family: var(--font-mono); font-size: var(--text-xs,.6875rem); text-transform: uppercase; letter-spacing: .04em; color: var(--ink); }
+.originalLanding .landingLoop span { background: var(--card-paper); border: 1px solid var(--hairline); border-radius: var(--radius-pill,999px); padding: 8px 14px; }
+.originalLanding .landingCta { display: block; margin: 0; padding: 56px 0 40px; border: 0; border-radius: 0; background: transparent; color: inherit; text-align: center; }
+.originalLanding .landingCta .landingSectionHeadline { max-width: none; margin: 0 0 24px; color: inherit; }
+.originalLanding .landingStamp { display: inline-block; margin: 0 0 20px; padding: 10px 20px; border: 3px solid var(--stamp-green); border-radius: var(--radius-lg,8px); color: var(--stamp-green); font-family: var(--font-mono); font-weight: 700; font-size: var(--text-sm,.8125rem); text-transform: uppercase; letter-spacing: .06em; transform: rotate(-4deg); }
+.originalLanding .fieldGlowCard { grid-template-rows: 1fr auto; }
+.originalLanding [data-glow]::before,.originalLanding [data-glow]::after { pointer-events:none; content:""; position:absolute; inset:calc(var(--border-size) * -1); border:var(--border-size) solid transparent; border-radius:calc(var(--radius) * 1px); background-attachment:fixed; background-size:calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size))); background-repeat:no-repeat; background-position:50% 50%; mask:linear-gradient(transparent,transparent),linear-gradient(white,white); mask-clip:padding-box,border-box; mask-composite:intersect; }
+.originalLanding [data-glow]::before { background-image:radial-gradient(calc(var(--spotlight-size) * .75) calc(var(--spotlight-size) * .75) at calc(var(--x,0) * 1px) calc(var(--y,0) * 1px),hsl(var(--hue,19) calc(var(--saturation,85) * 1%) calc(var(--lightness,45) * 1%) / var(--border-spot-opacity,1)),transparent 100%); filter:brightness(1.5); }
+.originalLanding [data-glow]::after { background-image:radial-gradient(calc(var(--spotlight-size) * .5) calc(var(--spotlight-size) * .5) at calc(var(--x,0) * 1px) calc(var(--y,0) * 1px),hsl(0 100% 100% / var(--border-light-opacity,1)),transparent 100%); }
+.originalLanding [data-glow] > [data-glow] { position:absolute; inset:0; opacity:var(--outer,1); border-radius:calc(var(--radius) * 1px); filter:blur(calc(var(--border-size) * 10)); background:none; pointer-events:none; border:none; }
+.originalLanding [data-glow] > [data-glow]::before { inset:-10px; border-width:10px; }
+@keyframes stampDown { from { opacity:0; transform:scale(.92) rotate(-6deg); } }
+@media (max-width:800px) { .originalLanding .landingHero { grid-template-columns:1fr; padding:48px 0 40px; } .originalLanding .landingSteps { grid-template-columns:1fr; } .originalLanding .landingTagStack { height:220px; margin-top:20px; } }
+@media (prefers-reduced-motion:reduce) { .originalLanding .fieldTag { animation:none; } .originalLanding .fieldTag:hover { transform:none !important; } }
